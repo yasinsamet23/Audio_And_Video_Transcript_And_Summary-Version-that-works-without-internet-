@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="aya-expanse-8b\.cache\huggingface\.gitignore" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\.gitattributes.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\aya-expanse-8B.png.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\config.json.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\generation_config.json.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\model-00001-of-00004.safetensors.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\model-00002-of-00004.safetensors.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\model-00003-of-00004.safetensors.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\model-00004-of-00004.safetensors.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\model.safetensors.index.json.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\README.md.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\special_tokens_map.json.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\tokenizer.json.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\tokenizer_config.json.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\winrates_by_lang.png.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\winrates_dolly.png.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\winrates_marenahard.png.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\winrates_marenahard_complete.png.metadata" />
+    <None Include="aya-expanse-8b\.cache\huggingface\download\winrates_step_by_step.png.metadata" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="summarize.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="transcribe.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
