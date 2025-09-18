@@ -57,6 +57,8 @@ OWNER kısmını Hugging Face’deki kullanıcı veya organizasyon adıyla deği
 filename kısmı modelin ana dosya adıdır, repo içindeki doğru dosyayı kullanın.
 
 
+2. Git LFS ile direkt klonlama (alternatif):
+
 
 
 # Git LFS kurulumu
@@ -65,3 +67,8 @@ git lfs install
 # Hugging Face reposunu klonla
 git clone https://huggingface.co/OWNER/aya-expanse-8b Audio_And_Video_Summary/aya-expanse-8b
 git clone https://huggingface.co/OWNER/whisper_local Audio_And_Video_Summary/whisper_local
+
+Not:
+
+OWNER kısmını Hugging Face’deki kullanıcı veya organizasyon adıyla değiştirin.
+
