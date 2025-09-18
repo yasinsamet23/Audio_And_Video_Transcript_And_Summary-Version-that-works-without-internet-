@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audio_And_Video_Transcript_And_Summary(Version that works without internet)", "Audio_And_Video_Summary\Audio_And_Video_Transcript_And_Summary(Version that works without internet).csproj", "{787B9838-4BC8-411E-A532-D623F3B05116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{787B9838-4BC8-411E-A532-D623F3B05116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787B9838-4BC8-411E-A532-D623F3B05116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787B9838-4BC8-411E-A532-D623F3B05116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787B9838-4BC8-411E-A532-D623F3B05116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9A86FFA-B6E3-4070-A059-45DC9461AE27}
+	EndGlobalSection
+EndGlobal
