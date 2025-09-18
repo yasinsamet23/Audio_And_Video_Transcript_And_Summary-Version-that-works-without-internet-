@@ -4,9 +4,28 @@ Bu proje, video ve ses dosyalarını internetsiz olarak yazıya dönüştürür 
 
 ---
 
+⚙️ Kurulum Adımları
+
+Projeyi kullanmadan önce aşağıdaki adımları tamamlamalısınız:
+
+🐍 Python Gereksinimi
+
+Python 3.8 veya üzeri sisteminizde kurulu olmalıdır.
+Python’u buradan indirebilirsiniz: https://www.python.org/downloads/
+
+📦 Gerekli Python Kütüphaneleri
+
+Terminal veya Komut İstemi (CMD) üzerinden aşağıdaki komutları çalıştırarak gerekli kütüphaneleri yükleyin:
+
+pip install ffmpeg-python
+pip install torch torchaudio transformers
+
+
+Not: torch, torchaudio ve transformers paketleri, ses/video transkripsiyonu ve özetleme işlemleri için gereklidir.
+
 ## Model klasörleri
 
-Bu proje, `aya-expanse-8b` ve `whisper_local` modellerini gerektirir.  
+Bu proje, `aya-expanse-8b` ve `whisper-large-v3` modellerini gerektirir.  
 Aşağıdaki komutları kullanarak modelleri `Audio_And_Video_Summary` klasörüne indirebilirsiniz.
 
 ---
@@ -24,37 +43,25 @@ Ardından Python ile modelleri indirin:
 
 
 
-from huggingface_hub import hf_hub_download
+from huggingface_hub import snapshot_download
 import os
 
 # Hedef klasörleri oluştur
 os.makedirs("Audio_And_Video_Summary/aya-expanse-8b", exist_ok=True)
 os.makedirs("Audio_And_Video_Summary/whisper_local", exist_ok=True)
 
-# aya-expanse-8b model dosyasını indir
-hf_hub_download(
-    repo_id="OWNER/aya-expanse-8b",  # OWNER kısmını Hugging Face kullanıcı/ad ile değiştirin
-    filename="pytorch_model.bin",
-    cache_dir="Audio_And_Video_Summary/aya-expanse-8b"
+# CohereLabs/aya-expanse-8b modelini indir
+snapshot_download(
+    repo_id="CohereLabs/aya-expanse-8b",
+    local_dir="Audio_And_Video_Summary/aya-expanse-8b"
 )
 
-# whisper_local model dosyasını indir
-hf_hub_download(
-    repo_id="OWNER/whisper_local",  # OWNER kısmını Hugging Face kullanıcı/ad ile değiştirin
-    filename="pytorch_model.bin",
-    cache_dir="Audio_And_Video_Summary/whisper_local"
+# OpenAI Whisper modeli (openai/whisper-large-v3) indir
+snapshot_download(
+    repo_id="openai/whisper-large-v3",
+    local_dir="Audio_And_Video_Summary/whisper_local"
 )
 
-
-
-
-
-
-Not:
-
-OWNER kısmını Hugging Face’deki kullanıcı veya organizasyon adıyla değiştirin.
-
-filename kısmı modelin ana dosya adıdır, repo içindeki doğru dosyayı kullanın.
 
 
 2. Git LFS ile direkt klonlama (alternatif):
@@ -62,13 +69,12 @@ filename kısmı modelin ana dosya adıdır, repo içindeki doğru dosyayı kull
 
 
 # Git LFS kurulumu
+
+
 git lfs install
 
 # Hugging Face reposunu klonla
-git clone https://huggingface.co/OWNER/aya-expanse-8b Audio_And_Video_Summary/aya-expanse-8b
-git clone https://huggingface.co/OWNER/whisper_local Audio_And_Video_Summary/whisper_local
+git clone https://huggingface.co/CohereLabs/aya-expanse-8b Audio_And_Video_Summary/aya-expanse-8b
+git clone https://huggingface.co/openai/whisper-large-v3 Audio_And_Video_Summary/whisper_local
 
-Not:
-
-OWNER kısmını Hugging Face’deki kullanıcı veya organizasyon adıyla değiştirin.
 
